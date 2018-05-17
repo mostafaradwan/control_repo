@@ -8,17 +8,18 @@ class jenkins {
   }
   
   #Add the Jenkins repo to yum in case it's not there
-  yumrepo { 'jenkins-yum-repo':
+  package { "jenkins":
   
-    baseurl => "http://pkg.jenkins-ci.org/redhat/jenkins.repo",
-    enabled => 1,
+    provider => rpm,
+    source => "http://pkg.jenkins-ci.org/redhat/jenkins-2.122-1.1.noarch.rpm",
+    ensure => installed,
 }
   
   #Install Jenkins
   package { 'jenkins':
   
      ensure  => present,
-     require => [ Yumrepo["jenkins-yum-repo"],Package['java8'] ] ,
+     require => [ Package["java8"],Package['jenkins'] ] ,
 }
   
 }
