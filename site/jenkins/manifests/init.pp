@@ -7,8 +7,6 @@ class jenkins {
   
   #Ensure the latest version of Java is installed since Jenkins requires JRE v1.8+
   package { 'java':
-  
-    ensure  => present,
     ensure =>  'latest',
   }
   
