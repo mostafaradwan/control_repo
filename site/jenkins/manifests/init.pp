@@ -9,7 +9,7 @@ class jenkins {
   package { 'java':
   
     ensure  => present,
-    ensure => latest,
+    ensure =>  'latest',
   }
   
 }
