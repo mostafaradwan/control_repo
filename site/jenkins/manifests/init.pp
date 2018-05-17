@@ -18,7 +18,7 @@ class jenkins {
 file_line { 'jenkins_port_line':
   ensure =>  present,
   path   => '/etc/sysconfig/jenkins',
-  line   => 'JENKINS_PORT="8000',
+  line   => 'JENKINS_PORT=8000',
   match  => '^\ JENKINS_PORT\=',
 }
 
