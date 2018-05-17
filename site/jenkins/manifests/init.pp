@@ -18,7 +18,7 @@ class jenkins {
   package { 'jenkins':
   
      ensure  => present,
-     require => [ Yumrepo["jenkins-yum-repo"],Package['Java8'] ] ,
+     require => [ Yumrepo["jenkins-yum-repo"],Package['java8'] ] ,
 }
   
 }
