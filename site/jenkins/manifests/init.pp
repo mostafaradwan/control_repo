@@ -11,7 +11,7 @@ class jenkins {
   yumrepo { "jenkins-yum-repo":
   
     baseurl => "http://pkg.jenkins-ci.org/redhat/jenkins.repo",
-     enabled => 1,
+    enabled => 1,
 }
   
   #Install Jenkins
