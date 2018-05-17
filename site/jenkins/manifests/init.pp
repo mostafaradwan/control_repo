@@ -8,10 +8,10 @@ class jenkins {
   }
   
   
-  #service {'jenkins':  
+   #service {'jenkins':  
    # ensure  => running,
    #enable  => true,
    # require => Package['java'],
-  #}
+   #}
   
 }
