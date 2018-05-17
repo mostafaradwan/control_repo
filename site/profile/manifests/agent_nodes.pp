@@ -15,8 +15,8 @@ class profile::agent_nodes {
     ip      => '172.18.0.3',
   }
 
-  host {'jenkins.puppet.vm':
-    ensure  => present,
-    ip      => '172.18.0.4',
-  }
+#  host {'jenkins.puppet.vm':
+#    ensure  => present,
+#    ip      => '172.18.0.4',
+#  }
 }
