@@ -8,7 +8,7 @@ class jenkins {
   }
   
   #Add the Jenkins repo to yum in case it's not there
-  yumrepo { "jenkins-yum-repo":
+  yumrepo { 'jenkins-yum-repo':
   
     baseurl => "http://pkg.jenkins-ci.org/redhat/jenkins.repo",
     enabled => 1,
@@ -18,7 +18,7 @@ class jenkins {
   package { 'jenkins':
   
      ensure  => present,
-     require => Yumrepo["jenkins-yum-repo"],
+     require => [ Yumrepo["jenkins-yum-repo"],Package['Java8'] ] ,
 }
   
 }
