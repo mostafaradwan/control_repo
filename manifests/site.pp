@@ -21,5 +21,5 @@ node /^db/ {
 }
 
 node /^jenkins/ {
- include role::db_server
+ include role::jenkins_server
 }
