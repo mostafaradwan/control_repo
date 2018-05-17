@@ -7,11 +7,4 @@ class jenkins {
     ensure => latest,
   }
   
-  
-   #service {'jenkins':  
-   # ensure  => running,
-   #enable  => true,
-   # require => Package['java'],
-   #}
-  
 }
