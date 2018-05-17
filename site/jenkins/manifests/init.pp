@@ -22,7 +22,7 @@ class jenkins {
     source  => 'puppet:///modules/jenkins/jenkins.service',
   }
   
- service{'minecraft':
+ service{'jenkins':
   
     ensure  => running,
     enable  => true,
