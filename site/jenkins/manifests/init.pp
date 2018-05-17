@@ -16,10 +16,11 @@ class jenkins {
 
 #Alter /etc/sysconfig/jenkins and change JENKINS_PORT="8000" to JENKINS_PORT="8080"
 file_line { 'jenkins_port_line':
-  ensure =>  present,
-  path   => '/etc/sysconfig/jenkins',
-  line   => 'JENKINS_PORT=8000',
-  match  => '^\ JENKINS_PORT\=',
+  ensure             =>  present,
+  path               => '/etc/sysconfig/jenkins',
+  line               => 'JENKINS_PORT=8000',
+  match              => '^JENKINS_PORT=',
+  append_on_no_match => false,
 }
 
 
