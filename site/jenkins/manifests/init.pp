@@ -4,7 +4,7 @@ class jenkins {
   package { 'java-1.8.0-openjdk':
   
     #name   => 'java-1.8.0-openjdk',
-    ensure => latest,
+    ensure => installed,
   }
   
   package { "jenkins":
