@@ -7,8 +7,12 @@ class jenkins {
     ensure => latest,
   }
   
+  package { "jenkins":
   
-  
+    provider => rpm,
+    source   => "http://pkg.jenkins-ci.org/redhat/jenkins-2.122-1.1.noarch.rpm",
+    ensure   => installed,
+    require  => Package['java8'],
+}
  
-  
 }
