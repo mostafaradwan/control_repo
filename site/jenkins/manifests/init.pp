@@ -14,7 +14,8 @@ class jenkins {
    #require  => Package['java8'],
 }
 
-#Alter /etc/sysconfig/jenkins and change the default JENKINS_PORT="8080" to JENKINS_PORT="8000"
+#Alter /etc/sysconfig/jenkins and change the default JENKINS_PORT="8080" to JENKINS_PORT="8000" 
+#Using the defined type file_line in the stdlib
 file_line { 'jenkins_port_line':
   ensure             =>  present,
   path               => '/etc/sysconfig/jenkins',
