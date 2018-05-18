@@ -19,7 +19,7 @@ file_line { 'jenkins_port_line':
   ensure             =>  present,
   path               => '/etc/sysconfig/jenkins',
   line               => 'JENKINS_PORT=8000',
-  match              => '^\ JENKINS_PORT\=8080',
+  match              => 'JENKINS_PORT=',
   append_on_no_match => false,
 }
 
