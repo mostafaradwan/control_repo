@@ -2,7 +2,7 @@
 Description=Jenkins Daemon
 
 [Service]
-ExecStart=/usr/bin/java -jar /usr/lib/jenkins/jenkins.war
+ExecStart=/usr/bin/java -jar /usr/lib/jenkins/jenkins.war --httpPort=8000
 User=jenkins
 
 [Install]
